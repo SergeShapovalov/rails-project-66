@@ -39,6 +39,7 @@ gem "jbuilder"
 gem "bcrypt", "~> 3.1.7"
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
+gem 'octokit'
 gem 'pundit'
 
 gem 'rails-i18n'
