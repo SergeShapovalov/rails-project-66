@@ -111,8 +111,12 @@ GEM
     erubi (1.13.0)
     faraday (2.9.1)
       faraday-net_http (>= 2.0, < 3.2)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
     faraday-net_http (3.1.0)
       net-http
+    faraday-retry (2.2.1)
+      faraday (~> 2.0)
     flash_rails_messages (2.3.0)
       rails (>= 5.2)
     globalid (1.2.1)
@@ -148,6 +152,7 @@ GEM
     msgpack (1.7.2)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
+    multipart-post (2.4.1)
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
@@ -358,6 +363,8 @@ DEPENDENCIES
   cssbundling-rails
   debug
   dotenv-rails
+  faraday-multipart
+  faraday-retry
   flash_rails_messages
   jbuilder
   jsbundling-rails

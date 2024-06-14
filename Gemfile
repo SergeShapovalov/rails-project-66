@@ -50,6 +50,9 @@ gem 'slim'
 gem 'slim_lint'
 gem 'slim-rails'
 
+gem 'faraday-retry'
+gem 'faraday-multipart'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
