@@ -31,3 +31,15 @@ en:
   layouts:
     application:
       title: Quality Analyzer
+    header:
+      hexlet_logo: Hexlet Logo
+      home: Home
+      github_auth: Login with Github
+  web:
+    main:
+      index:
+        hexlet_title: Greetings from Hexlet!
+        hexlet_description: Practical programming courses
+        project_title: Repository Quality Analyzer
+        project_description: A project that helps automatically monitor the quality of repositories on Github. It tracks changes and runs them through built-in analyzers. Then it generates reports and sends them to the user.
+        project_link: To learn more

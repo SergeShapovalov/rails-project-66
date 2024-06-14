@@ -1,5 +1,5 @@
 doctype html
-html
+html.h-100
   head
     title
       = t('.title')
@@ -9,5 +9,13 @@ html
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
 
-  body
-    = yield
+  body.d-flex.flex-column.h-100
+    .container.mb-2
+      = render 'layouts/header'
+    main
+      .mt-4.mb-5.pb-5
+        .container
+          .p-4.align-items-center.border.shadow.bg-white.rounded-3
+            = yield
+    footer.bg-dark.text-light.mt-auto
+      = render 'layouts/footer'
