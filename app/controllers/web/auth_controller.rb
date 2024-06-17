@@ -3,10 +3,11 @@ module Web
   class AuthController < Web::ApplicationController
     def callback
       auth_hash = request.env['omniauth.auth']
-      user_info = auth_hash['info']
+      email = auth_hash[:info][:email].downcase
 
-      user = User.find_or_initialize_by(email: user_info[:email].downcase)
-      user.name = user_info[:name]
+      user = User.find_or_initialize_by(email:)
+      user.nickname = auth_hash[:extra][:raw_info][:login]
+      user.token = auth_hash[:credentials][:token]
 
       if user.save
         sign_in(user.id)

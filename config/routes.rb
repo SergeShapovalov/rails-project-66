@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out
-  post 'auth/:provider', to: 'auth#request', as: :auth_request
-  get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
-
   # Defines the root path route ("/")
   scope module: :web do
     root 'main#index'
+
+    post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out
+    post 'auth/:provider', to: 'auth#request', as: :auth_request
+    get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
   end
 end

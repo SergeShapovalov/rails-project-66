@@ -43,3 +43,5 @@ en:
         project_title: Repository Quality Analyzer
         project_description: A project that helps automatically monitor the quality of repositories on Github. It tracks changes and runs them through built-in analyzers. Then it generates reports and sends them to the user.
         project_link: To learn more
+  success: You have successfully logged in
+  failed: Authentication error
