@@ -1,32 +1,3 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
   layouts:
     application:
@@ -35,6 +6,7 @@ en:
       hexlet_logo: Hexlet Logo
       home: Home
       github_auth: Login with Github
+      sign_out: Sign Out
   web:
     main:
       index:
@@ -43,5 +15,11 @@ en:
         project_title: Repository Quality Analyzer
         project_description: A project that helps automatically monitor the quality of repositories on Github. It tracks changes and runs them through built-in analyzers. Then it generates reports and sends them to the user.
         project_link: To learn more
-  success: You have successfully logged in
+    auth:
+      sign_out:
+        success: You have successfully logout
+      callback:
+        success: You have successfully logged in
   failed: Authentication error
+  not_authorized: Not Authorized
+  authorize_error: Authorization Error
