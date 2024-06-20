@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   scope module: :web do
     root 'main#index'
 
+    resources :repositories
+
     post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out
     post 'auth/:provider', to: 'auth#request', as: :auth_request
     get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth

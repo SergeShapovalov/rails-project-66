@@ -7,6 +7,7 @@ en:
       home: Home
       github_auth: Login with Github
       sign_out: Sign Out
+      repositories: Repositories
   web:
     main:
       index:
