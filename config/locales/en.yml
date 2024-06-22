@@ -21,6 +21,12 @@ en:
         success: You have successfully logout
       callback:
         success: You have successfully logged in
+    repositories:
+      index:
+        add: Add
+        name: Name
+        language: Language
+        status: Last check status
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error

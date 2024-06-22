@@ -1,5 +1,7 @@
 class Web::RepositoriesController < ApplicationController
-  def index; end
+  def index
+    @repositories = Repository.all
+  end
 
   def show; end
 

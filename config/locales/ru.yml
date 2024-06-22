@@ -21,6 +21,12 @@ ru:
         success: Вы вышли из системы
       callback:
         success: Вы успешно вошли
+    repositories:
+      index:
+        add: Добавить
+        name: Название
+        language: Язык
+        status: Статус последней проверки
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации

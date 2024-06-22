@@ -1,2 +1,15 @@
-h1 Web::Repositories#index
-p Find me in app/views/web/repositories/index.html.slim
+.mb-4
+  h1
+= link_to t('.add'), new_repository_path, class: 'btn btn-primary'
+table.table.table-striped.table-hover.mt-4
+  thead
+    tr
+      th scope='col' = t('.name')
+      th scope='col' = t('.language')
+      th scope='col' = t('.status')
+  tbody
+    - @repositories.each do |repository|
+      tr
+        td
+        td
+        td
