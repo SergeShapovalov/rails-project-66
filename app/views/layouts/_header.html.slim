@@ -9,7 +9,7 @@
             = t('.home')
         - if authorized?
           li.nav-item.me-2
-            = link_to root_path, class: 'nav-link text-dark' do
+            = link_to repositories_path, class: 'nav-link text-dark' do
               = t('.repositories')
   ul.nav.nav-pills
     - if authorized?

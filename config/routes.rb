@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   scope module: :web do
     root 'main#index'
 
-    resources :repositories
+    resources :repositories, only: %i[index show new create]
 
     post 'auth/sign_out', to: 'auth#sign_out', as: :sign_out
     post 'auth/:provider', to: 'auth#request', as: :auth_request
