@@ -1,11 +1,14 @@
-class Web::RepositoriesController < ApplicationController
+class Web::RepositoriesController < Web::ApplicationController
   def index
     @repositories = Repository.all
   end
 
   def show; end
 
-  def new; end
+  def new
+    client = Octokit::Client.new(access_token: current_user.token)
+    @repositories = client.repositories(current_user.nickname)
+  end
 
   def create; end
 end
