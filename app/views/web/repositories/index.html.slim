@@ -10,8 +10,6 @@ table.table.table-striped.table-hover.mt-4
   tbody
     - @repositories.each do |repository|
       tr
-        td
-          = repository.name
-        td
-          = repository.language
+        td = repository.name
+        td = repository.language
         td
