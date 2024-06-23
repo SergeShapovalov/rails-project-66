@@ -36,6 +36,10 @@ ru:
         status: Статус
         commit_id: ID коммита
         test_passed: Проверка пройдена?
+      checks:
+        create:
+          success:
+            Проверка началась
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации

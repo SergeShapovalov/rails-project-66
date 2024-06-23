@@ -36,6 +36,9 @@ en:
         status: Status
         commit_id: Commit ID
         test_passed: Test passed?
+      checks:
+        create:
+          success: The test has begun
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error
