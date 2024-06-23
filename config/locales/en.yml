@@ -30,3 +30,4 @@ en:
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error
+  create_success: Repository added
