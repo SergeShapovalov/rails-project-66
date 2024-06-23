@@ -1,0 +1,2 @@
+module Repositories::ChecksHelper
+end
