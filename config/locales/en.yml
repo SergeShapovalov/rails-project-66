@@ -9,7 +9,7 @@ en:
       sign_out: Sign Out
       repositories: Repositories
   web:
-    main:
+    home:
       index:
         hexlet_title: Greetings from Hexlet!
         hexlet_description: Practical programming courses

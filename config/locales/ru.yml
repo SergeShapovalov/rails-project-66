@@ -9,7 +9,7 @@ ru:
       sign_out: Выйти
       repositories: Репозитории
   web:
-    main:
+    home:
       index:
         hexlet_title: Привет от Хекслета!
         hexlet_description: Практические курсы по программированию

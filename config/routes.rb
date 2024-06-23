@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   scope module: :web do
-    root 'main#index'
+    root 'home#index'
 
     resources :repositories, only: %i[index show new create]
 
