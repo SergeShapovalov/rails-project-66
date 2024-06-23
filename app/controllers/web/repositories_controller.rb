@@ -13,6 +13,16 @@ class Web::RepositoriesController < Web::ApplicationController
     @repository = current_user.repositories.find_or_initialize_by(repository_params)
 
     if @repository.save!
+      repository_info = ApplicationContainer[:octokit_client].repository(current_user, @repository)
+
+      @repository.update!(
+        language: repository_info[:language].downcase,
+        name: repository_info[:name],
+        full_name: repository_info[:full_name],
+        clone_url: repository_info[:clone_url],
+        ssh_url: repository_info[:ssh_url]
+      )
+
       redirect_to repositories_path, notice: t('repository.create.success')
     else
       render :new, status: :unprocessable_entity
@@ -26,8 +36,6 @@ class Web::RepositoriesController < Web::ApplicationController
   end
 
   def repositories
-    client = Octokit::Client.new(access_token: current_user.token)
-    client.repositories(current_user.nickname)
-          .filter { |repository| repository[:language].downcase == 'ruby' }
+    ApplicationContainer[:octokit_client].repositories(current_user)
   end
 end
