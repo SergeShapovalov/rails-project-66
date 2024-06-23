@@ -13,7 +13,7 @@ class Web::RepositoriesController < Web::ApplicationController
     @repository = current_user.repositories.find_or_initialize_by(repository_params)
 
     if @repository.save!
-      redirect_to repositories_path, notice: t('create_success')
+      redirect_to repositories_path, notice: t('repository.create.success')
     else
       render :new, status: :unprocessable_entity
     end
