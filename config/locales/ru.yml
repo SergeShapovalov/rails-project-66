@@ -27,6 +27,15 @@ ru:
         name: Название
         language: Язык
         status: Статус последней проверки
+      show:
+        check: Проверить
+        name: Название
+        language: Язык
+        created_at: Дата создания
+        updated_at: Дата обновления
+        status: Статус
+        commit_id: ID коммита
+        test_passed: Проверка пройдена?
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации

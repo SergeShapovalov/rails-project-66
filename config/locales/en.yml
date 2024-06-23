@@ -27,6 +27,15 @@ en:
         name: Name
         language: Language
         status: Last check status
+      show:
+        check: Check
+        name: Name
+        language: Language
+        created_at: Created
+        updated_at: Updated
+        status: Status
+        commit_id: Commit ID
+        test_passed: Test passed?
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error
