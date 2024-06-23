@@ -30,4 +30,6 @@ ru:
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации
-  create_success: Репозиторий добавлен
+  repository:
+    create:
+      success: Репозиторий добавлен
