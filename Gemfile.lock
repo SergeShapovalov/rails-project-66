@@ -381,7 +381,7 @@ DEPENDENCIES
   flash_rails_messages
   jbuilder
   jsbundling-rails
-  minitest-power_assert
+  minitest-power_assert (~> 0.3.1)
   octokit
   omniauth-github
   omniauth-rails_csrf_protection
