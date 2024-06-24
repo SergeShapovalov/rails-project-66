@@ -16,4 +16,16 @@ class OctokitClient
       .repositories(user.nickname)
       .filter { |repository| repository[:language].downcase == 'ruby' }
   end
+
+  def self.create_hook(user, repository)
+    client(user).create_hook(
+      repository.github_id,
+      'web',
+      {
+        url: Rails.application.routes.url_helpers.api_checks_url,
+        content_type: 'json',
+        insecure_ssl: 1
+      }
+    )
+  end
 end

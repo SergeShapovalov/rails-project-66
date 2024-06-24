@@ -20,4 +20,13 @@ class OctokitClientStub
       }
     ]
   end
+
+  def self.create_hook(_user, _repository)
+    {
+      id: 1,
+      url: Rails.application.routes.url_helpers.api_checks_url,
+      content_type: 'json',
+      insecure_ssl: 1
+    }
+  end
 end
