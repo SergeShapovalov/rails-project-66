@@ -9,19 +9,32 @@ table.table
       td = l(@check.created_at, format: :standard)
     tr
       td = t('.status')
-      td
+      td = t(".statuses.#{@check.aasm_state}")
     tr
       td = t('.test_passed')
       td = @check.passed
     tr
       td = t('.offense_count')
-      td
+      td = @check.details['offense_count']
     tr
       td = t('.commit_id')
       td
-table.table.table-hover.mb-5
-  thead
-    tr
-      th = t('.message')
-      th = t('.rule')
-      th = t('.string')
+        - if @check.commit_id
+          = github_url @check, target: '_blank'
+- unless @check.details['files']&.empty?
+  table.table.table-hover.mb-5
+    thead
+      tr
+        th = t('.message')
+        th = t('.rule')
+        th = t('.string')
+    tbody
+      - @check.details['files']&.each do |file|
+        tr
+          td colspan='3'
+            = github_url(@check, file_path: file['file_path'], target: '_blank')
+        - file['offenses'].each do |offense|
+          tr
+            td = offense['message']
+            td = offense['rule']
+            td = offense['position']

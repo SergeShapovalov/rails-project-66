@@ -36,6 +36,11 @@ en:
         status: Status
         commit_id: Commit ID
         test_passed: Test passed?
+        statuses:
+          created: Created
+          requested: Requested
+          finished: Finished
+          failed: Failed
       checks:
         create:
           success: The test has begun
@@ -50,6 +55,11 @@ en:
           message: Message
           rule: Rule ID
           string: String and symbol
+          statuses:
+            created: Created
+            requested: Requested
+            finished: Finished
+            failed: Failed
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error

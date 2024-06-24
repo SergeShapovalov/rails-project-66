@@ -31,7 +31,9 @@ hr
       - @repository.checks.order(created_at: :desc).each do |check|
         tr
           td = link_to(check.id, repository_check_path(@repository, check))
+          td = t(".statuses.#{check.aasm_state}")
           td
-          td
+            - if check.commit_id
+              = github_url(check, target: '_blank')
           td = check.passed
           td = l(check.created_at, format: :standard)

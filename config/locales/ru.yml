@@ -36,6 +36,11 @@ ru:
         status: Статус
         commit_id: ID коммита
         test_passed: Проверка пройдена?
+        statuses:
+          created: Создана
+          requested: В процессе
+          finished: Завершена
+          failed: Не завершена
       checks:
         create:
           success:
@@ -51,6 +56,11 @@ ru:
           message: Сообщение
           rule: Идентификатор правила
           string: Строка и символ
+          statuses:
+            created: Создана
+            requested: В процессе
+            finished: Завершена
+            failed: Не завершена
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации
