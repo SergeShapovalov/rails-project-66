@@ -7,7 +7,9 @@ class Web::Repositories::ChecksController < Web::Repositories::ApplicationContro
 
   def create
     repository = Repository.find(params[:repository_id])
-    repository.checks.create!
+    check = repository.checks.create!
+
+    CheckRepositoryJob.perform_now(current_user, check)
 
     flash[:notice] = t('.success')
     redirect_to repository

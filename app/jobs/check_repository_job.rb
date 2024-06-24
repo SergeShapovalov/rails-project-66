@@ -34,7 +34,7 @@ class CheckRepositoryJob < ApplicationJob
 
     repository = check.repository
     check.update(commit_id: octokit.get_latest_commit_sha(user, repository))
-    dir_path = octokit.clone_repository(user, repository)
+    dir_path = octokit.clone_repository(repository)
 
     linter = Linters::Handler.new(repository)
     result = linter.exec(dir_path)

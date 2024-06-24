@@ -26,16 +26,16 @@ class OctokitClient
     )
   end
 
-  def self.clone_repository(user, repository)
+  def self.clone_repository(repository)
     dir_path = Rails.root.join("tmp/project-66/#{repository.id}")
 
     FileUtils.rm_rf(dir_path)
-    client(user).clone_repository(repository, dir_path)
+    system("git clone #{repository.clone_url} #{dir_path}")
 
     dir_path
   end
 
-  def get_latest_commit_sha(user, repository)
+  def self.get_latest_commit_sha(user, repository)
     client(user).commits(repository.full_name).first.sha
   end
 end
