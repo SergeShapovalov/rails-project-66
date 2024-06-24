@@ -57,3 +57,10 @@ ru:
   repository:
     create:
       success: Репозиторий добавлен
+  check_result_mailer:
+    failed_check_email:
+      message: Ошибка проверки
+    error_check_email:
+      message: Есть замечания
+    passed_check_email:
+      message: Проверка успешно пройдена

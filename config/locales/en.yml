@@ -56,3 +56,10 @@ en:
   repository:
     create:
       success: Repository added
+  check_result_mailer:
+    failed_check_email:
+      message: Failed check
+    error_check_email:
+      message: Have errors
+    passed_check_email:
+      message: Test was successfully completed

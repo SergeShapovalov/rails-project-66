@@ -23,6 +23,8 @@ class CheckRepositoryJob < ApplicationJob
 
     check.update(email_vars.merge(details: linter_result))
     check.public_send(status)
+
+    send_email(email, user, check.repository)
   end
 
   private
@@ -39,5 +41,12 @@ class CheckRepositoryJob < ApplicationJob
     FileUtils.rm_rf(dir_path)
 
     result
+  end
+
+  def send_email(email, user, repository)
+    CheckResultMailer
+      .with(user_id: user.id, repository_id: repository.id)
+      .public_send(email)
+      .deliver_later
   end
 end
