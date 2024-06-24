@@ -19,13 +19,10 @@ class OctokitClient
 
   def self.create_hook(user, repository)
     client(user).create_hook(
-      repository.github_id,
+      repository.full_name,
       'web',
-      {
-        url: Rails.application.routes.url_helpers.api_checks_url,
-        content_type: 'json',
-        insecure_ssl: 1
-      }
+      { url: "#{ENV.fetch('BASE_URL', nil)}/api/checks", content_type: 'json' },
+      { events: %w[push], active: true }
     )
   end
 end
