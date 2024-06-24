@@ -40,6 +40,17 @@ ru:
         create:
           success:
             Проверка началась
+        show:
+          back: Перейти к репозиторию
+          check: "Проверка #%{check_id}"
+          created_at: Дата создания
+          status: Статус
+          test_passed: Проверка пройдена
+          offense_count: Количество замечаний
+          commit_id: ID коммита
+          message: Сообщение
+          rule: Идентификатор правила
+          string: Строка и символ
   failed: Ошибка аутентификации
   not_authorized: Не авторизовано
   authorize_error: Ошибка авторизации

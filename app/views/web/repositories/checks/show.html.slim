@@ -1,2 +1,27 @@
-h1 Repositories::Checks#show
-p Find me in app/views/web/repositories/checks/show.html.slim
+.mb-4
+  h1
+= link_to t('.back'), @check.repository, class: 'btn btn-primary mb-4'
+h1 = t('.check', check_id: @check.id)
+table.table
+  tbody
+    tr
+      td = t('.created_at')
+      td = l(@check.created_at, format: :standard)
+    tr
+      td = t('.status')
+      td
+    tr
+      td = t('.test_passed')
+      td = @check.passed
+    tr
+      td = t('.offense_count')
+      td
+    tr
+      td = t('.commit_id')
+      td
+table.table.table-hover.mb-5
+  thead
+    tr
+      th = t('.message')
+      th = t('.rule')
+      th = t('.string')

@@ -39,6 +39,17 @@ en:
       checks:
         create:
           success: The test has begun
+        show:
+          back: Go to repository
+          check: "Check #%{check_id}"
+          created_at: Created
+          status: Status
+          test_passed: Test passed
+          offense_count: Offence count
+          commit_id: Commit ID
+          message: Message
+          rule: Rule ID
+          string: String and symbol
   failed: Authentication error
   not_authorized: Not Authorized
   authorize_error: Authorization Error

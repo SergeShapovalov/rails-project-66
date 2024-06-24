@@ -18,19 +18,20 @@ p
   strong.me-2 = t('.updated_at')
   = l(@repository.updated_at, format: :standard)
 hr
-table.table.table-striped
-  thead
-    tr
-      th scope='col'
-      th scope='col' = t('.status')
-      th scope='col' = t('.commit_id')
-      th scope='col' = t('.test_passed')
-      th scope='col' = t('.created_at')
-  tbody
-    - @repository.checks.order(created_at: :desc).each do |check|
+- unless @repository.checks.empty?
+  table.table.table-striped
+    thead
       tr
-        td = link_to(check.id, repository_check_path(@repository, check))
-        td
-        td
-        td = check.passed
-        td = l(check.created_at, format: :standard)
+        th scope='col'
+        th scope='col' = t('.status')
+        th scope='col' = t('.commit_id')
+        th scope='col' = t('.test_passed')
+        th scope='col' = t('.created_at')
+    tbody
+      - @repository.checks.order(created_at: :desc).each do |check|
+        tr
+          td = link_to(check.id, repository_check_path(@repository, check))
+          td
+          td
+          td = check.passed
+          td = l(check.created_at, format: :standard)
