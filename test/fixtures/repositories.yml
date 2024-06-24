@@ -2,18 +2,18 @@
 
 one:
   name: Repository_1
-  github_id: github_rep_1
+  github_id: 12345
   full_name: Ruby_Repository_1
-  language: Ruby
-  clone_url: repository-1
-  ssh_url: repository-1
+  language: ruby
+  clone_url: repository-url-1
+  ssh_url: repository-url-1
   user: one
 
 two:
   name: Repository_2
-  github_id: github_rep_2
+  github_id: 67890
   full_name: Ruby_Repository_2
-  language: Ruby
-  clone_url: repository-2
-  ssh_url: repository-2
+  language: ruby
+  clone_url: repository-url-2
+  ssh_url: repository-url-2
   user: two
