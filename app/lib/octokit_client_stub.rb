@@ -29,4 +29,12 @@ class OctokitClientStub
       insecure_ssl: 1
     }
   end
+
+  def self.clone_repository(_user, _repository)
+    'tmp/project-66/test'
+  end
+
+  def get_latest_commit_sha(_user, _repository)
+    'test_sha'
+  end
 end
