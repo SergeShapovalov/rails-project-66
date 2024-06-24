@@ -25,7 +25,7 @@ class Web::RepositoriesController < Web::ApplicationController
         ssh_url: repository_info[:ssh_url]
       )
 
-      CreateHookJob.perform_now(@repository, current_user)
+      CreateHookJob.perform_now(current_user, @repository)
 
       redirect_to repositories_path, notice: t('repository.create.success')
     else
