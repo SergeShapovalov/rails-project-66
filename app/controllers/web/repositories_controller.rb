@@ -1,18 +1,25 @@
 class Web::RepositoriesController < Web::ApplicationController
+  before_action :authorize_user
+
   def index
     @repositories = Repository.all
   end
 
   def show
     @repository = Repository.find(params[:id])
+    authorize @repository
   end
 
   def new
-    @repositories = repositories
+    repository = current_user.repositories.build
+    authorize repository
+
+    @repositories = ApplicationContainer[:octokit_client].repositories(current_user)
   end
 
   def create
     @repository = current_user.repositories.find_or_initialize_by(repository_params)
+    authorize @repository
 
     if @repository.save!
       repository_info = ApplicationContainer[:octokit_client].repository(current_user, @repository)
@@ -37,9 +44,5 @@ class Web::RepositoriesController < Web::ApplicationController
 
   def repository_params
     params.require(:repository).permit(:github_id)
-  end
-
-  def repositories
-    ApplicationContainer[:octokit_client].repositories(current_user)
   end
 end

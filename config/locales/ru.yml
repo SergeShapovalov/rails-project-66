@@ -22,6 +22,8 @@ ru:
       callback:
         success: Вы успешно вошли
     repositories:
+      not_authorized: Не авторизовано
+      authorize_error: Ошибка авторизации
       index:
         add: Добавить
         name: Название
@@ -62,8 +64,6 @@ ru:
             finished: Завершена
             failed: Не завершена
   failed: Ошибка аутентификации
-  not_authorized: Не авторизовано
-  authorize_error: Ошибка авторизации
   repository:
     create:
       success: Репозиторий добавлен

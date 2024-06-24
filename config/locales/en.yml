@@ -22,6 +22,8 @@ en:
       callback:
         success: You have successfully logged in
     repositories:
+      not_authorized: Not Authorized
+      authorize_error: Authorization Error
       index:
         add: Add
         name: Name
@@ -61,8 +63,6 @@ en:
             finished: Finished
             failed: Failed
   failed: Authentication error
-  not_authorized: Not Authorized
-  authorize_error: Authorization Error
   repository:
     create:
       success: Repository added
