@@ -5,5 +5,8 @@ class CreateHookJob < ApplicationJob
 
   def perform(user, repository)
     ApplicationContainer[:octokit_client].create_hook(user, repository)
+  rescue StandardError
+    'Hook already exists on this repository'
+    # See: https://docs.github.com/rest/repos/webhooks#create-a-repository-webhook
   end
 end
