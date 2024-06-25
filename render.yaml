@@ -1,0 +1,22 @@
+databases:
+  - name: quality
+    databaseName: quality
+    user: serhii
+    plan: free
+
+services:
+  - type: web
+    name: quality-project
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: quality
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
