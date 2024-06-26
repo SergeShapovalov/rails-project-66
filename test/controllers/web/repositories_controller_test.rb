@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
   setup do

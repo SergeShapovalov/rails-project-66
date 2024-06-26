@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper'
 
 class Api::ChecksControllerTest < ActionDispatch::IntegrationTest
   # test "should get create" do
