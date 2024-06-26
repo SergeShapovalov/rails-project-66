@@ -4,12 +4,19 @@ one:
   commit_id: MyString
   repository: one
   aasm_state: created
-  details: 
+  details: { offense_count: 1, files: [] }
   passed: false
 
 two:
   commit_id: MyString
   repository: two
   aasm_state: finished
-  details: 
+  details: { offense_count: 2, files: [] }
   passed: false
+
+three:
+  commit_id: MyString
+  repository: one
+  aasm_state: finished
+  details: { offense_count: 0, files: [] }
+  passed: true
