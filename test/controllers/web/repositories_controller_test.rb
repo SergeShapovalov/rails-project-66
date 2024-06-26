@@ -16,4 +16,26 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     get repositories_url
     assert_redirected_to root_path
   end
+
+  test 'should get new' do
+    sign_in @user
+
+    get new_repository_url
+    assert_response :success
+  end
+
+  # test 'should show repository' do
+  #   sign_in @user
+  #
+  #   get repository_url(@repository)
+  #   assert_response :success
+  # end
+  #
+  # test 'should create repository' do
+  #   sign_in @user
+  #
+  #   post repositories_url, params: { repository: { github_id: @git_rep_id } }
+  #
+  #   assert ::Repository.find_by(github_id: @git_rep_id)
+  # end
 end
