@@ -30,7 +30,7 @@ class OctokitClientStub
     }
   end
 
-  def self.clone_repository(_user, _repository)
+  def self.clone_repository(_repository)
     'tmp/project-66/test'
   end
 
