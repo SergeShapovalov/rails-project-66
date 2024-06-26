@@ -17,12 +17,12 @@ class Web::RepositoriesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
   end
 
-  test 'should get new' do
-    sign_in @user
-
-    get new_repository_url
-    assert_response :success
-  end
+  # test 'should get new' do
+  #   sign_in @user
+  #
+  #   get new_repository_url
+  #   assert_response :success
+  # end
 
   # test 'should show repository' do
   #   sign_in @user

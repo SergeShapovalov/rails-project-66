@@ -7,7 +7,7 @@ module Web
       email = auth_hash[:info][:email].downcase
 
       user = User.find_or_initialize_by(email:)
-      user.nickname = auth_hash[:extra][:raw_info][:login]
+      user.nickname = auth_hash[:info][:nickname]
       user.token = auth_hash[:credentials][:token]
 
       if user.save
