@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::ChecksController < ApplicationController
   skip_before_action :verify_authenticity_token
 

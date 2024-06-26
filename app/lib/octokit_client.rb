@@ -12,9 +12,11 @@ class OctokitClient
   end
 
   def self.repositories(user)
+    languages = %w[ruby javascript]
+
     client(user)
       .repositories(user.nickname)
-      .filter { |repository| %w[ruby javascript].include?(repository[:language].downcase) }
+      .filter { |repository| languages.include?(repository[:language].downcase) }
   end
 
   def self.create_hook(user, repository)

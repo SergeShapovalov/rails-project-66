@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Repositories::ChecksHelper
   def github_url(check, options = {})
     commit = check.commit_id.slice(..6)
