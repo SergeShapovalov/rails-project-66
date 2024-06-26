@@ -21,7 +21,7 @@ table.table
       td
         - if @check.commit_id
           = github_url @check, target: '_blank'
-- unless @check.details['files'].blank?
+- if @check.details['files'].present?
   table.table.table-hover.mb-5
     thead
       tr
