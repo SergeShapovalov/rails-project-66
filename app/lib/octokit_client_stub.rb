@@ -34,7 +34,7 @@ class OctokitClientStub
     'tmp/project-66/test'
   end
 
-  def get_latest_commit_sha(_user, _repository)
+  def self.get_latest_commit_sha(_user, _repository)
     'test_sha'
   end
 end
