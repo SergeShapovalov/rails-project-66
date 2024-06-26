@@ -118,6 +118,8 @@ GEM
     enumerize (2.8.1)
       activesupport (>= 3.2)
     erubi (1.13.0)
+    faker (3.4.1)
+      i18n (>= 1.8.11, < 2)
     faraday (2.9.1)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-multipart (1.0.4)
@@ -385,6 +387,7 @@ DEPENDENCIES
   dotenv-rails
   dry-container
   enumerize
+  faker
   faraday-multipart
   faraday-retry
   flash_rails_messages

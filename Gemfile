@@ -43,6 +43,7 @@ gem 'octokit'
 gem 'enumerize'
 gem 'pundit'
 
+gem 'faker'
 gem 'rails-i18n'
 
 gem 'flash_rails_messages'
