@@ -31,7 +31,7 @@ The project is implemented using the following technologies:
 1. Start the project with `make run` command
 
 ## Build
-The build is deployed to:
+The build is deployed to: [Link](https://quality-project.onrender.com)
 
 ## Roadmap
 - Pass the review and finalize the training project
