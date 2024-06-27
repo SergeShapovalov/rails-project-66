@@ -61,6 +61,8 @@ gem 'aasm'
 gem 'dry-container'
 gem 'minitest-power_assert', '~> 0.3.1'
 
+gem 'sentry-rails'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
