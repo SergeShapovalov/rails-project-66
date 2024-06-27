@@ -4,7 +4,7 @@ class Web::RepositoriesController < Web::ApplicationController
   before_action :authorize_user
 
   def index
-    @repositories = Repository.all
+    @repositories = current_user.repositories
   end
 
   def show
