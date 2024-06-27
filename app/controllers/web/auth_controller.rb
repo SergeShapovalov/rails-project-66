@@ -4,7 +4,7 @@ module Web
   class AuthController < Web::ApplicationController
     def callback
       auth_hash = request.env['omniauth.auth']
-      email = auth_hash[:info][:email].downcase
+      email = auth_hash[:info][:email]&.downcase
 
       user = User.find_or_initialize_by(email:)
       user.nickname = auth_hash[:info][:nickname]

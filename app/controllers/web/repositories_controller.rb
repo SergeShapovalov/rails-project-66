@@ -27,7 +27,7 @@ class Web::RepositoriesController < Web::ApplicationController
       repository_info = ApplicationContainer[:octokit_client].repository(current_user, @repository)
 
       @repository.update!(
-        language: repository_info[:language].downcase,
+        language: repository_info[:language]&.downcase,
         name: repository_info[:name],
         full_name: repository_info[:full_name],
         clone_url: repository_info[:clone_url],

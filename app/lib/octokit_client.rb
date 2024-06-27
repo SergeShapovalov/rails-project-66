@@ -16,7 +16,7 @@ class OctokitClient
 
     client(user)
       .repositories(user.nickname)
-      .filter { |repository| languages.include?(repository[:language].downcase) }
+      .filter { |repository| languages.include?(repository[:language]&.downcase) }
   end
 
   def self.create_hook(user, repository)
