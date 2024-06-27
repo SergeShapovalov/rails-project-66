@@ -11,7 +11,7 @@ class Repositories::ChecksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create check' do
-    assert_difference('::Repository::Check.count') do
+    assert_difference('Repository::Check.count') do
       post repository_checks_url(@repository),
            params: {
              repository: {
@@ -20,6 +20,8 @@ class Repositories::ChecksControllerTest < ActionDispatch::IntegrationTest
              }
            }
     end
+
+    assert Repository::Check.last.repository_id == @repository.id
   end
 
   test 'should show' do
