@@ -9,6 +9,8 @@ module Web
       user = User.find_or_initialize_by(email:)
       user.nickname = auth_hash[:info][:nickname]
       user.token = auth_hash[:credentials][:token]
+      user.provider = auth_hash[:provider]
+      user.uid = auth_hash[:uid]
 
       if user.save
         sign_in(user.id)
