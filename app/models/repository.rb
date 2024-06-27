@@ -4,7 +4,7 @@ class Repository < ApplicationRecord
   extend Enumerize
 
   belongs_to :user
-  has_many :checks, class_name: 'Repository::Check'
+  has_many :checks
 
   enumerize :language, in: %w[ruby javascript]
 
